@@ -5,6 +5,7 @@ ARG wg_tools_tag=v1.0.20200513
 
 RUN apk add --update git build-base libmnl-dev iptables
 
+ENV CGO_ENABLED=0
 RUN git clone https://git.zx2c4.com/wireguard-go && \
     cd wireguard-go && \
     git checkout $wg_go_tag && \
